@@ -1,0 +1,17 @@
+version: "3.9"
+
+services:
+  database:
+    image: postgres
+    container_name: db_budget_control
+    environment:
+      POSTGRES_USER: ${DATABASE_USER:?error}
+      POSTGRES_PASSWORD: ${DATABASE_PASSWORD?error}
+      PGDATA: /data/postgres
+    ports:
+      - "5432:5432"
+    volumes:
+      - vol_db_budget_control:/data/postgres
+
+volumes:
+  vol_db_budget_control:

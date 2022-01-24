@@ -1,0 +1,6 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost/budget_control
+    username: ${DATABASE_USER}
+    password: ${DATABASE_PASSWORD}
+
